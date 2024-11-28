@@ -17,7 +17,7 @@ int main()
 	else if (pt % 2==1) {
 		pt=pt-1;
     	while(pt>0){
-    	wynik = wynik * wynik;
+    	wynik = zm * wynik;
     	pt=pt/2;
 	    cout<<"krok";
 	    }
@@ -25,7 +25,7 @@ int main()
 	}
 	else {
     	while(pt>0){
-    	wynik = wynik * wynik;
+    	wynik = zm * wynik;
     	pt=pt/2;
 	    cout<<"krok";
 	    cout<<pt;
