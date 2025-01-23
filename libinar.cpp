@@ -3,7 +3,7 @@ using namespace std;
 
 int binar(int liczba)
 {
-	int i=0,tab[31];
+	int i=0,tab[4];
 
 	while(liczba>0)
 	{
