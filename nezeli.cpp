@@ -1,35 +1,35 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() {
-    int wiel;
-    int x = 4;
-    int t;
-    int d;
-    int j;
-    int z;
-    cout << "Podaj stopien wielomianu: ";
-    cin >> wiel;
-    while (x >= 0) {
-    x = x - 1;
-        cout << "Podaj współczynnik stojący przy potędze" << x << ": ";
-        cout << x;
-     if (x = 3) {
-       cin >> t;
-     }
-     else {
-         if (x = 2) {
-             cin >> d;
-         }
-         else {
-             if (x = 1) {
-                 cin >> j;
-             }
-             else {
-                     cin >> z;
-             }
-         }
-     }
-    }
-    return 0;
+int horner(int wsp[],int st, int x)
+{
+	if(st==0)
+		return wsp[0];
+	
+	return x*horner(wsp,st-1,x)+wsp[st];
+}
+
+int main()
+{
+	int *wspol;
+	int pot, argument;
+	
+	cout<<"Stopień wielomianu: ";
+	cin>>pot;
+	
+	wspol = new int [pot];
+
+	for(int i=0;i<=pot;i++)
+	{
+		cout<<"współczynnik przy potędze "<<pot-i<<": ";
+		cin>>wspol[i];
+	}
+	
+	cout<<"Podaj argument: ";
+	cin>>argument;
+	
+	cout<<"schemat: ";
+	cout<<"W( "<<argument<<" ) = "<<horner(wspol,pot,argument);
+
+	return 0;
 }
