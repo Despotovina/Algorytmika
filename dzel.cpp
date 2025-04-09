@@ -8,7 +8,7 @@ double f(double x)
 	return x*(x*(x-3)+2)-6; //rozbijam schematem Hornera
 }
 
-double polowienie_przedzialow(double a, double b, double epsilon)
+double pol(double a, double b, double epsilon)
 {
 	if(f(a)==0.0)return a;
 	if(f(b)==0.0)return b;
@@ -19,7 +19,7 @@ double polowienie_przedzialow(double a, double b, double epsilon)
 	{
 		srodek = (a+b)/2;
 		
-		if(f(srodek) == 0.0) //jesli miejsce zerowe jest w srodku 
+		if(f(srodek) == 0.0)
 			return srodek;
 		
 		if(f(a)*f(srodek)<0) 
@@ -34,8 +34,8 @@ int main()
 {
 	double a = -10, b = 10, epsilon = 0.00001;
 	
-	cout<<"Znalezione miejsce zerowe wynosi: ";
-	cout<<fixed<<setprecision(5)<<polowienie_przedzialow(a, b, epsilon);
+	cout<<"miejsce zerowe wynosi: ";
+	cout<<fixed<<setprecision(5)<<pol(a, b, epsilon);
 
 	return 0;
 }
