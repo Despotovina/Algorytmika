@@ -4,8 +4,7 @@ using namespace std;
 
 double f(double x)
 {
-	//rozpatrujemy wielomian f(x) = x^3 - 3x^2 + 2x - 6 
-	return x*(x*(x-3)+2)-6; //rozbijam schematem Hornera
+	return x*(x*(x-3)+2)-6;
 }
 
 double pol(double a, double b, double epsilon)
