@@ -57,7 +57,7 @@ int main()
 	
 	sortowanie_przez_scalanie(tab,0,n-1);
 	
-	//wypisanie wyników
+	
 	for(int i=0;i<n;i++)
 		cout<<tab[i]<<" ";
 	
