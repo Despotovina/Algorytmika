@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int *pom; //tablica pomocnicza, potrzebna przy scalaniu
+int *pom; 
 
 
 void scal(int tab[], int lewy, int srodek, int prawy) 
