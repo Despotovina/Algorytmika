@@ -44,7 +44,7 @@ void sortowanie_przez_scalanie(int tab[],int lewy, int prawy)
 int main()
 {
 	int *tab,
-	n; //liczba elementów tablicy
+	n; 
 	
 	cin>>n;
 	tab = new int[n]; 
